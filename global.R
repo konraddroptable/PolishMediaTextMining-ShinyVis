@@ -78,17 +78,14 @@ events_mapping = data.frame(key = names(x), value = as.character(x), stringsAsFa
 wc <- readRDS("data/wc.rds")
 
 
+# lda <- read.csv("data/lda.csv", stringsAsFactors=FALSE)
+# lda$source <- str_replace(lda$source, "_", " ")
+# 
+# saveRDS(lda, "data/lda.rds")
 
 
+lda <- readRDS("data/lda.rds")
+lda$topicId <- lda$topicId + 1
 
 
-
-
-
-
-
-
-
-
-
-
+w2v <- read.csv("data/word2vec.csv", stringsAsFactors=FALSE)

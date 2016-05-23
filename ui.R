@@ -65,6 +65,15 @@ shinyUI(
                                                    <li><a href='https://github.com/konraddroptable/PolishMediaTextMining-ShinyVis'>Wizualizacja w Shiny</a></li></ul>")
                                               )
                              ),
+                    tabPanel("Rozkłady", column(width = 12,
+                                                h4("Analiza liczby słów w artykułach i liczby liter w słowach"),
+                                                h4("Histogram liczby słów w artykule"),
+                                                img(src="words_distribution.png", align="center"),
+                                                HTML("<p>W powyższych tabelach oraz na wykresie przedstawiono średnią liczbę słów w artykule oraz rozkład liczby słów w artykule. Można zaobserwować pewne różnice pomiędzy poszczególnymi mediami. Średnio najkrótsze teksty są umieszczane w Super Expressie. Zgadza się to ze specyfiką pism tabloidowych, które pierwotnie posiadały mniejszy format niż tradycyjne gazety i oferowały krótkie, proste teksty mające wzbudzać sensację, opatrzone dużą ilością ilustracji. Histogram dla tego źródła odbiega najbardziej od pozostałych – dominują teksty w zakresie 100-200 słów. Liczba artykułów zawierających powyżej 300 słów jest bardzo niska.</p><p>Widać również różnicę pomiędzy Naszym Dziennikiem a Gazetą.pl. W Gazecie jest znacznie więcej najkrótszych artykułów, co można tłumaczyć internetową specyfiką tego medium. Część treści jest udostępniana w formie materiałów wideo lub galerii zdjęć opatrzonych krótkim opisem. Poza odchyleniem dla najkrótszych artykułów, rozkład liczby słów w artykule jest zbliżony dla obu mediów.</p>"),
+                                                h4("Histogram liczby liter w słowie"),
+                                                img(src="letters_distribution.png", align="center"),
+                                                HTML("<p>W powyższych tabelach oraz na wykresie przedstawiono rozkład liczby liter w słowie w badanych źródłach. Najmniejszą średnią ilość liter oraz najniższe odchylenie standardowe ma Super Express, zaś najwyższą średnią ma Nasz Dziennik. Na histogramie widać, że w Super Expressie częściej niż w pozostałych źródłach występują słowa mające do 7 liter, natomiast w Naszym Dzienniku jest względnie najwięcej słów posiadających ponad 8 liter. Chociaż w tym przypadku różnice są znacznie bardziej subtelne niż dla liczby słów w artykule to mogą też świadczyć o różnicy w strukturze języka wykorzystywanego w artykułach Super Expressu.</p>")
+                                                )),
                     tabPanel("Wydarzenia", column(width = 12,
                                                   h4("Analiza głównych składowych"),
                                                   HTML("<p>Zastosowanie 

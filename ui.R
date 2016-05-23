@@ -60,7 +60,10 @@ shinyUI(
                                                    <li><a href='https://github.com/pbylicki/media-crawl'>Pobieranie danych</a></li>
                                                    <li><a href='https://github.com/konraddroptable/PolishMediaTextMining-RClean'>Oczyszczanie danych</a></li>
                                                    <li><a href='https://github.com/konraddroptable/PolishMediaTextMining-Spark'>Analiza danych w Sparku</a></li>
-                                                   <li><a href='https://github.com/konraddroptable/PolishMediaTextMining-ShinyVis'>Wizualizacja w Shiny</a></li></ul>")
+                                                   <li><a href='https://github.com/konraddroptable/PolishMediaTextMining-ShinyVis'>Wizualizacja w Shiny</a></li>
+                                                   <li><a href='https://gist.github.com/pbylicki/8fa8885578aab3e2ff0c6b084741bfb0'>Word2Vec</a></li>
+                                                   <li><a href='https://gist.github.com/pbylicki/f970a1e227be8ca842d79740639f5eeb'>FameRank</a></li>
+                                                   </ul>")
                                               )
                              ),
                     tabPanel("Rozkłady", column(width = 12,

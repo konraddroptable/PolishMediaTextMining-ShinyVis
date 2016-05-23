@@ -48,8 +48,6 @@ shinyUI(
                                               h4("Dane"),
                                               HTML("Pod względem klasyfikacji danych, artykuły z gazet i portali internetowych należą do danych tworzonych przez człowieka. Ze względu na dużą liczbę źródeł są bardzo różnorodne i wymagają starannej obróbki przed wykorzystaniem narzędzi analitycznych. Do wydobycia danych ze stron internetowych wykorzystano technikę scrapingu, dzięki której uzyskano surowy tekst artykułów. W zależności od rodzaju analizy, dane mogły być dodatkowo obrabiane aby uzyskać preferowany format wejściowy danych. Wykorzystano artykuły z kategorii „Polska”, „Polityka” i „Świat”."),
                                               HTML("Dla każdego medium dzięki scrapingowi uzyskano listę kilkunastu tysięcy (15-19 tys.) artykułów wraz z tytułem, datą publikacji oraz linkiem do źródła.<br>"),
-                                              HTML("</br><p>Liczba słów w artykule:</p>"),
-                                              tableOutput("introWordcount"),
                                               HTML("<br><h4>Technologie</h4>
                                                    <ul>
                                                    <li>Python - pobieranie danych ze stron (webscraping), machine learning w Sparku</li>
@@ -67,10 +65,14 @@ shinyUI(
                              ),
                     tabPanel("Rozkłady", column(width = 12,
                                                 h4("Analiza liczby słów w artykułach i liczby liter w słowach"),
+                                                h4("Liczba słów w artykule"),
+                                                tableOutput("wordsPerArticleStats"),
                                                 h4("Histogram liczby słów w artykule"),
                                                 img(src="words_distribution.png", align="center"),
                                                 tableOutput("wordsPerArticle"),
                                                 HTML("<p>W powyższych tabelach oraz na wykresie przedstawiono średnią liczbę słów w artykule oraz rozkład liczby słów w artykule. Można zaobserwować pewne różnice pomiędzy poszczególnymi mediami. Średnio najkrótsze teksty są umieszczane w Super Expressie. Zgadza się to ze specyfiką pism tabloidowych, które pierwotnie posiadały mniejszy format niż tradycyjne gazety i oferowały krótkie, proste teksty mające wzbudzać sensację, opatrzone dużą ilością ilustracji. Histogram dla tego źródła odbiega najbardziej od pozostałych – dominują teksty w zakresie 100-200 słów. Liczba artykułów zawierających powyżej 300 słów jest bardzo niska.</p><p>Widać również różnicę pomiędzy Naszym Dziennikiem a Gazetą.pl. W Gazecie jest znacznie więcej najkrótszych artykułów, co można tłumaczyć internetową specyfiką tego medium. Część treści jest udostępniana w formie materiałów wideo lub galerii zdjęć opatrzonych krótkim opisem. Poza odchyleniem dla najkrótszych artykułów, rozkład liczby słów w artykule jest zbliżony dla obu mediów.</p>"),
+                                                h4("Liczba liter w słowie"),
+                                                tableOutput("lettersPerWordStats"),
                                                 h4("Histogram liczby liter w słowie"),
                                                 img(src="letters_distribution.png", align="center"),
                                                 tableOutput("lettersPerWord"),

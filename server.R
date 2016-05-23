@@ -131,7 +131,7 @@ shinyServer(function(input, output) {
     return(tbl[, 1:topicNumber()])
   })
   
-  output$introWordcount <- renderTable({
+  output$lettersPerWordStats <- renderTable({
     return(data.frame(Gazeta.Wyborcza = c(5.975764,
                                           3.869931),
                       Nasz.Dziennik = c(6.051237,
@@ -139,6 +139,18 @@ shinyServer(function(input, output) {
                       Super.Express = c(5.800287,
                                         3.291448),
                       row.names = c("Średnia", "Odch. Stand.")))
+  })
+  
+  output$wordsPerArticleStats <- renderTable({
+    return(data.frame(
+      Gazeta.Wyborcza = c(321.8616279,
+                          272.8136891),
+      Nasz.Dziennik = c(399.5880842,
+                        315.5193647),
+      Super.Express = c(183.5500311,
+                        149.0472196),
+      row.names = c("Średnia", "Odch. Stand.")
+    ))
   })
   
   output$word2vecTable <- renderDataTable(datatable({

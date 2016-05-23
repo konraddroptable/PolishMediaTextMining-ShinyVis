@@ -154,4 +154,8 @@ shinyServer(function(input, output) {
   
   output$countriesFameRank <- renderTable(countries)
   
+  output$lettersPerWord <- renderTable(lettersPerWord)
+  
+  output$wordsPerArticle <- renderTable(wordsPerArticle)
+  
 })

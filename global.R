@@ -93,3 +93,7 @@ w2v <- read.csv("data/word2vec.csv", stringsAsFactors=FALSE)
 countries <- read.csv("data/countries.csv", stringsAsFactors=FALSE)
 
 people <- read.csv("data/People.csv", stringsAsFactors=FALSE)
+
+lettersPerWord <- read.csv("data/lettersPerWord.csv", stringsAsFactors=FALSE)
+
+wordsPerArticle <- read.csv("data/wordsPerArticle.csv", stringsAsFactors=FALSE)

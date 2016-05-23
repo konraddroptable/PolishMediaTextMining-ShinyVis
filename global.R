@@ -89,3 +89,7 @@ lda$topicId <- lda$topicId + 1
 
 
 w2v <- read.csv("data/word2vec.csv", stringsAsFactors=FALSE)
+
+countries <- read.csv("data/countries.csv", stringsAsFactors=FALSE)
+
+people <- read.csv("data/People.csv", stringsAsFactors=FALSE)

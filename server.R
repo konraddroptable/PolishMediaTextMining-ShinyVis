@@ -149,6 +149,9 @@ shinyServer(function(input, output) {
     if(wordSelect() == "papież"){return(HTML("W tabeli widać wyraźną różnicę w skojarzeniach dla słowa „papież”. W Naszym Dzienniku jest ono zdecydowanie powiązane z Janem Pawłem II. Obecny papież Franciszek nie występuje w pierwszych czterdziestu wynikach wcale, natomiast poprzedni papież Benedykt XVI pojawia się na 24 miejscu. Z kolei dla Gazety.pl to Franciszek znajduje się na pierwszym miejscu, na czwartym Benedykt XVI, natomiast Jan Paweł II dopiero na 14 miejscu. W Super Expressie również Franciszek pojawia się przed Janem Pawłem II, jednak wyniki są gorzej dopasowane niż dla pozostałych źródeł. Może to stanowić pewną wskazówkę do interpretacji kwestii religijnych poruszanych przez wybrane media."))}
     if(wordSelect() == "gender"){return(HTML("W tabeli zestawiono wyniki dla hasła „gender”. Zwraca uwagę ranking z Naszego Dziennika, w którym łączy się ono z takimi pojęciami jak pedofilia, satanizm, neomarksizm, aborcja, dewiacja czy homoseksualizm, które sugerują zdecydowanie negatywne konotacje w danym źródle. W pozostałych źródłach trudniej się doszukać tak wyraźnych powiązań między hasłami."))}
     if(wordSelect() == "niemcy"){return(HTML("W tabeli zawierającej wyniki dla hasła „niemcy” po raz kolejny widać bardzo wyraźne nacechowanie emocjonalne najbardziej powiązanych słów. Widać, że główny kontekst w jakim występuje to hasło dotyczy II wojny światowej i zbrodni wojennych, poza hasłami określającymi inne narodowości zaangażowane w konflikt pojawia się wiele określeń na czynności jakich mieli się oni dokonywać. Dla porównania w Gazecie.pl zestawienie zawiera w głównej mierze nazwy państw i narodowości, jako najbardziej powiązane znaczeniem z wyszukiwanym hasłem."))}
-  }) 
+  })
+  output$peopleFameRank <- renderTable(people)
+  
+  output$countriesFameRank <- renderTable(countries)
   
 })
